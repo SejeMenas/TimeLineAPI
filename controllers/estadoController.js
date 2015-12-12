@@ -8,7 +8,7 @@ var EstadoController = function(config) {
     est.getEstados(function(err, response, body) {
       if (err) return next(err)
 
-      res.send(body)
+      res.json(body)
     })
   }
 }
