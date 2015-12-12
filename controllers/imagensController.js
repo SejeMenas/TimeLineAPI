@@ -8,7 +8,7 @@ var ImagensController = function(config) {
     imageParts = body.image.split(",")
 
     var params = {
-      image: imageParts[1],
+      image: body.image,
       gallery_name: 'candidatos'
     }
 
