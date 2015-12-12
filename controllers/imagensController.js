@@ -18,8 +18,8 @@ var ImagensController = function(config) {
     }
 
     client.recognize(params)
-        .then(resultHandler)
-        .catch(console.error)
+      .then(resultHandler)
+      .catch(next)
   }
 }
 
