@@ -11,6 +11,7 @@ var TransparenciaBR = function(config) {
     
     options.url = this.api + endpoint
     options.headers = {
+      'Access-Control-Allow-Origin': '*',
       'App-Token': config.transApi.appToken
     }
     
