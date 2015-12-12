@@ -9,7 +9,9 @@ var routes = function(app, config) {
   var candidatoController = new CandidatoController(config)
   
   app.get('/partidos', partidoController.getPartidos)
+  
   app.get('/estados', estadoController.getEstados)
+
   app.get('/candidatos', candidatoController.getCandidatos)
 }
 
