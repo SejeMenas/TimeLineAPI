@@ -7,8 +7,7 @@ var PartidoController = function(config) {
 
     tbr.getPartidos(function(err, response, body) {
       if (err) return next(err)
-
-      res.json(body)
+      res.send(body)
     })
   }
 }

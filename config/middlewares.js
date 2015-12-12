@@ -19,6 +19,11 @@ var middlewares = function(app) {
     next()
   })
 
+  app.use(function setContentType(req, res, next) {
+    res.header('Content-Type', 'application/json')
+    next()
+  })
+
 }
 
 module.exports = middlewares

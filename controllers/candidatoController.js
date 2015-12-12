@@ -8,8 +8,7 @@ var CandidatoController = function(config) {
 
     cand.listaCandidatos(options, function(err, response, body) {
       if (err) return next(err)
-
-      res.json(body)
+      res.send(body)
     })
   }
 
@@ -23,8 +22,7 @@ var CandidatoController = function(config) {
 
     cand.getCandidato(options, function(err, response, body) {
       if (err) return next(err)
-
-      res.json(body)
+      res.send(body)
     })
   }
 }
