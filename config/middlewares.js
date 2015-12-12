@@ -14,29 +14,18 @@ var middlewares = function(app) {
   app.use(function enableCors(req, res, next) {
     res.header("Access-Control-Allow-Origin", '*')
     res.header("Access-Control-Allow-Methods", "GET, OPTIONS")
-    res.header("Access-Control-Allow-Credentials", "true")
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
-    next()
+    if (req.method == "OPTIONS") {
+      res.send(200).end()
+    } else {
+      next()
+    }
   })
 
   app.use(function setContentType(req, res, next) {
     res.header('Content-Type', 'application/json')
     next()
   })
-
-  app.use(function respondOptions(req, res, next) {
-    if (req.method == "OPTIONS") {
-      res.header("Access-Control-Allow-Origin", '*')
-      res.header("Access-Control-Allow-Methods", "GET, OPTIONS")
-      res.header("Access-Control-Allow-Credentials", "true")
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
-      res.status(200).end()
-    } else {
-      next()
-    }
-  })
-
-
 }
 
 module.exports = middlewares
