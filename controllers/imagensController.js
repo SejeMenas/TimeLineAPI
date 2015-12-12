@@ -5,7 +5,6 @@ var ImagensController = function(config) {
 
   this.getSemelhante = function(req, res, next) {
     var body = req.body
-    imageParts = body.image.split(",")
 
     var params = {
       image: body.image,
