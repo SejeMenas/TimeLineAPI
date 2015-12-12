@@ -32,5 +32,10 @@ TransparenciaBR.prototype.listaCandidatos = function(options, callback) {
 	this.consumerAPI("/candidatos", callback, requestOptions)
 }
 
+TransparenciaBR.prototype.getCandidato = function(options, callback) {
+  var id = options.id
+  this.consumerAPI('/candidatos/' + id, callback)
+}
+
 
 module.exports = TransparenciaBR
