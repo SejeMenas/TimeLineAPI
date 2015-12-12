@@ -1,7 +1,7 @@
 var server = {
   transApi: {
-    appToken: process.env.TRANS_BR_APPTOKEN,
-    secret: process.env.TRANS_BR_SECRET
+    appToken: "tB1QxLWj3y1P",
+    secret: "PpzYRV36c9K2"
   }
 }
 
