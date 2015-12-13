@@ -10,10 +10,10 @@ var ImagensController = function(config) {
     var buf = new Buffer(imagem, 'base64')
 
     console.log('write file')
-    fs.writeFileSync("./public/images/candidate.webp", buf)
+    fs.writeFileSync("./public/images/candidate.jpeg", buf)
 
     var params = {
-      image: 'https://hackpuc-30.herokuapp.com/images/candidate.webp',
+      image: 'https://hackpuc-30.herokuapp.com/images/candidate.jpeg',
       gallery_name: 'candidatos'
     }
 
