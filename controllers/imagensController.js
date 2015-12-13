@@ -5,7 +5,8 @@ var ImagensController = function(config) {
 
   this.getSemelhante = function(req, res, next) {
     var body = req.body
-    console.log(body)
+
+    console.log(body.image.length)
 
     var params = {
       image: body.image,
