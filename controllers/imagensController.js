@@ -5,6 +5,7 @@ var ImagensController = function(config) {
 
   this.getSemelhante = function(req, res, next) {
     var body = req.body
+    console.log(body)
 
     var params = {
       image: body.image,
@@ -16,6 +17,7 @@ var ImagensController = function(config) {
       res.send(result)
     }
 
+    console.log('Using kairos')
     client.recognize(params)
       .then(resultHandler)
       .catch(next)
