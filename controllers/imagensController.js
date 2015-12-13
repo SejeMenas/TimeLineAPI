@@ -26,7 +26,7 @@ var ImagensController = function(config) {
       .then(resultHandler)
       .catch(function(err) {
         console.error(err)
-        res.status(500).send({err: 'Erro na chamada do Kairos'})
+        res.status(500).send({msg: 'Erro na chamada do Kairos', err: err})
       })
   }
 }
